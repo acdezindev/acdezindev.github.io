@@ -12,8 +12,8 @@ showPoweredBy: false
 name: "Abraham C."
 title: "Técnico Superior en DAM (Todas las asignaturas aprobadas)"
 tagline: "Desarrollador Java | 20 años en retail tecnológico | Buscando prácticas en Málaga"
-email: "[acdezindev@gmail.com]"
-phone: "[tu-teléfono]"
+email: "acdezindev@gmail.com"
+phone: "0000"
 location: "Málaga, España"
 avatarUrl: ""
 
@@ -93,7 +93,7 @@ projects:
   - name: "pikmin-recyclerview-app"
     description: "Aplicación Android que muestra un listado de los 9 tipos de Pikmin en una cuadrícula"
     tags: [Java, SQL, MySQL]
-    repoUrl: https://github.com/acdezindev/pikmin-recyclerview-app
+    repoUrl: "https://github.com/acdezindev/pikmin-recyclerview-app"
     featured: true
 
 # ── Formación académica ─────────────────────────────────────────────────
