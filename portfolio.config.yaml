@@ -4,8 +4,8 @@
 # ╚══════════════════════════════════════════════════════════════════════╝
 
 # ── Configuración general ──────────────────────────────────────────────
-siteMode: "portfolio"   # ← CAMBIADO a "portfolio" (esto activa tu web)
-siteUrl: "https://acdezindev.github.io" 
+siteMode: "portfolio"
+siteUrl: "https://acdezindev.github.io"
 showPoweredBy: false
 
 # ── Identidad ──────────────────────────────────────────────────────────
@@ -13,7 +13,7 @@ name: "Abraham C."
 title: "Técnico Superior en DAM (Todas las asignaturas aprobadas)"
 tagline: "Desarrollador Java | 20 años en retail tecnológico | Buscando prácticas en Málaga"
 email: "acdezindev@gmail.com"
-phone: "0000"
+phone: ""
 location: "Málaga, España"
 avatarUrl: ""
 
@@ -26,15 +26,15 @@ colorPreset: "indigo"
 
 # ── Secciones visibles ──────────────────────────────────────────────────
 sections:
-  - { id: about,          show: true  }
-  - { id: stats,          show: true  }
-  - { id: skills,         show: true  }
-  - { id: languages,      show: true  }
-  - { id: experience,     show: true  }
-  - { id: projects,       show: true  }
-  - { id: education,      show: true  }
+  - { id: about, show: true }
+  - { id: stats, show: true }
+  - { id: skills, show: true }
+  - { id: languages, show: true }
+  - { id: experience, show: true }
+  - { id: projects, show: true }
+  - { id: education, show: true }
   - { id: certifications, show: false }
-  - { id: contact,        show: true  }
+  - { id: contact, show: true }
 
 # ── Redes sociales ──────────────────────────────────────────────────────
 social:
@@ -45,7 +45,7 @@ social:
 
 # ── Sobre ti ────────────────────────────────────────────────────────────
 about: |
-  Técnico Superior en Desarrollo de Aplicaciones Multiplataforma con todas las asignaturas aprobadas. 
+  Técnico Superior en Desarrollo de Aplicaciones Multiplataforma con todas las asignaturas aprobadas.
   Actualmente busco prácticas (FCT) en Málaga para obtener el título y comenzar mi carrera como desarrollador.
 
   Antes de dar este salto a la programación, trabajé durante 20 años en retail tecnológico en El Corte Inglés,
@@ -98,7 +98,7 @@ projects:
 
 # ── Formación académica ─────────────────────────────────────────────────
 education:
-  - institution: "IES AGUADULCE , IES TRASSIERRA - Junta de Andalucía"
+  - institution: "IES AGUADULCE, IES TRASSIERRA - Junta de Andalucía"
     degree: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)"
     period: "2021 – 2025"
 
