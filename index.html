@@ -6,33 +6,38 @@
     <title>Abraham C. - Portfolio</title>
     <style>
         /* --- Estilos generales --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Cambiado de 'center' a 'flex-start' para que no se corte arriba */
             padding: 40px 20px;
+            min-height: 100vh; /* Ahora la altura es mínima, no fija */
         }
 
         /* --- Contenedor principal --- */
         .container {
             display: flex;
             max-width: 1100px;
-            background: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave y realista */
-            min-height: 500px;
             width: 100%;
-            border: 1px solid #ddd; /* Un borde simple que da sensación de "documento" */
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 12px; /* Suave redondeo en el borde general */
+            overflow: hidden; /* Para que las esquinas del contenedor sean redondeadas */
         }
 
-        /* --- BARRA LATERAL (Fondo gris oscuro, menos diseñador) --- */
+        /* --- BARRA LATERAL (foto, nombre, contacto) --- */
         .sidebar {
-            background-color: #2b2d42; /* Gris azulado oscuro, más "tech" */
+            background-color: #2b2d42;
             color: #fff;
             padding: 40px 25px;
             width: 33%;
@@ -78,52 +83,65 @@
             margin-top: 10px;
         }
 
-        .sidebar .info p { margin-bottom: 8px; }
+        .sidebar .info p {
+            margin-bottom: 8px;
+        }
+
         .sidebar .info a {
             color: #a0a0c0;
             text-decoration: none;
             font-weight: 500;
         }
-        .sidebar .info a:hover { color: #fff; text-decoration: underline; }
 
-        /* --- CONTENIDO PRINCIPAL (más sobrio) --- */
+        .sidebar .info a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* --- CONTENIDO PRINCIPAL (ahora con scroll si es necesario) --- */
         .main-content {
             padding: 40px 35px;
             width: 67%;
-            overflow-y: auto;
+            /* Ya no necesita overflow-y: auto; porque el body se encarga del scroll */
         }
 
         .main-content h2 {
             color: #2b2d42;
             font-size: 20px;
-            border-bottom: 2px solid #e0e0e0; /* Línea gris simple, menos estilizada */
+            border-bottom: 2px solid #e0e0e0;
             padding-bottom: 8px;
             margin-top: 25px;
             margin-bottom: 15px;
         }
 
-        .main-content h2:first-of-type { margin-top: 0; }
-        .main-content p { margin-bottom: 12px; line-height: 1.6; }
+        .main-content h2:first-of-type {
+            margin-top: 0;
+        }
 
-        /* --- Etiquetas de tecnología (más planas) --- */
+        .main-content p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        /* --- Etiquetas de tecnología --- */
         .tag {
             display: inline-block;
-            background-color: #e0e0e0; /* Fondo gris claro */
+            background-color: #e0e0e0;
             color: #2b2d42;
             padding: 3px 12px;
-            border-radius: 4px; /* Menos redondeado, más funcional */
+            border-radius: 4px;
             font-size: 13px;
             margin: 3px 4px 3px 0;
             font-weight: 500;
             border: 1px solid #ccc;
         }
 
-        /* --- Tarjetas sin sombras ni florituras --- */
+        /* --- Tarjetas de proyectos y experiencia --- */
         .card {
             background: #f8f9fa;
             padding: 18px 20px;
             margin-bottom: 18px;
-            border-left: 4px solid #2b2d42; /* Solo un borde a la izquierda para dar jerarquía */
+            border-left: 4px solid #2b2d42;
         }
 
         .card h3 {
@@ -139,21 +157,46 @@
             font-weight: 500;
         }
 
-        .card ul { padding-left: 20px; margin-top: 6px; }
-        .card ul li { margin-bottom: 4px; }
+        .card ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .card ul li {
+            margin-bottom: 4px;
+        }
+
         .card a {
             color: #2b2d42;
             font-weight: 600;
             text-decoration: none;
         }
-        .card a:hover { text-decoration: underline; }
 
-        /* --- Responsive --- */
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive: en móvil se apilan --- */
         @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar { width: 100%; padding: 30px 20px; }
-            .main-content { width: 100%; padding: 25px 20px; }
-            .sidebar img { width: 120px; height: 120px; }
+            .container {
+                flex-direction: column;
+                border-radius: 12px;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .sidebar img {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
@@ -161,8 +204,11 @@
 
     <div class="container">
 
+        <!-- BARRA LATERAL IZQUIERDA -->
         <div class="sidebar">
+            <!-- Foto de perfil (cambia el nombre si es necesario) -->
             <img src="FotoPerfilLinked.jpg" alt="Abraham C.">
+
             <h1>Abraham C.</h1>
             <div class="tagline">
                 Técnico Superior en DAM<br>
@@ -180,6 +226,7 @@
             </div>
         </div>
 
+        <!-- CONTENIDO PRINCIPAL DERECHO -->
         <div class="main-content">
 
             <h2>👋 Sobre mí</h2>
@@ -236,8 +283,10 @@
             </div>
 
         </div>
+        <!-- fin main-content -->
 
     </div>
+    <!-- fin container -->
 
 </body>
 </html>
