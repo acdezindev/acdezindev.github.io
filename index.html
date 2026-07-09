@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraham C. - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #2b2d42;
+            color: #fff;
+            padding: 40px 25px;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .sidebar .tagline {
+            font-size: 14px;
+            color: #b0b0c0;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .sidebar .info {
+            font-size: 14px;
+            color: #c0c0d0;
+            text-align: left;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+
+        .sidebar .info p {
+            margin-bottom: 8px;
+        }
+
+        .sidebar .info a {
+            color: #a0a0c0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .sidebar .info a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 40px 35px;
+            width: 67%;
+        }
+
+        .main-content h2 {
+            color: #2b2d42;
+            font-size: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .main-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .main-content p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            color: #2b2d42;
+            padding: 3px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin: 3px 4px 3px 0;
+            font-weight: 500;
+            border: 1px solid #ccc;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 18px 20px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #2b2d42;
+            margin-bottom: 5px;
+        }
+
+        .card .meta {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .card ul li {
+            margin-bottom: 4px;
+        }
+
+        /* ===== SOLO DOS ENLACES SENCILLOS ===== */
+        .project-links {
+            margin-top: 12px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #2b2d42;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid #2b2d42;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .project-links a:hover {
+            background: #2b2d42;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                border-radius: 12px;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .sidebar img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <img src="FotoPerfilLinked.jpg" alt="Abraham C.">
+            <h1>Abraham C.</h1>
+            <div class="tagline">
+                Técnico Superior en DAM<br>
+                <span style="font-size: 13px; color: #888;">Desarrollador Java | 20 años en retail</span>
+            </div>
+
+            <div class="info">
+                <p>📧 <a href="mailto:acdezindev@gmail.com">acdezindev@gmail.com</a></p>
+                <p>📍 Málaga, España</p>
+                <p>🔗 <a href="https://github.com/acdezindev">GitHub</a></p>
+                <p>🔗 <a href="https://linkedin.com/in/abrahamcdev">LinkedIn</a></p>
+                <p style="margin-top: 15px; font-size: 13px; color: #888;">
+                    🚀 Abierto a prácticas FCT
+                </p>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+            <h2>👋 Sobre mí</h2>
+            <p>
+                Técnico Superior en Desarrollo de Aplicaciones Multiplataforma con <strong>todas las asignaturas aprobadas</strong>.
+                Actualmente busco prácticas (FCT) en Málaga para obtener el título y comenzar mi carrera como desarrollador.
+            </p>
+            <p>
+                Antes de dar este salto a la programación, trabajé durante <strong>20 años en retail tecnológico</strong> en El Corte Inglés,
+                asesorando a clientes y desarrollando una sólida visión comercial y de producto.
+            </p>
+
+            <h2>⚙️ Tecnologías</h2>
+            <p>
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">SQL</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Android Studio</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+            </p>
+
+            <h2>📁 Proyectos</h2>
+            <div class="card">
+                <h3>📱 Pikmin RecyclerView App</h3>
+                <p>Aplicación Android que muestra un listado de los 9 tipos de Pikmin en una cuadrícula.</p>
+                <span class="tag">Android</span>
+                <span class="tag">Java</span>
+                <span class="tag">RecyclerView</span>
+                
+                <!-- ===== SOLO DOS ENLACES ===== -->
+                <div class="project-links">
+                    <a href="pikmin-demo.html">🎮 Ver Demo</a>
+                    <a href="pikmin-video.html">📹 Ver Video</a>
+                </div>
+            </div>
+
+            <h2>💼 Experiencia</h2>
+            <div class="card">
+                <h3>El Corte Inglés — Asesor Comercial</h3>
+                <div class="meta">2004 – Actualidad</div>
+                <p>Asesoramiento y venta de productos tecnológicos: TV, sonido, informática, gama blanca.</p>
+                <ul>
+                    <li>20 años de experiencia en el sector</li>
+                    <li>Especialista en electrónica de consumo</li>
+                    <li>Orientación al cliente y resolución de problemas</li>
+                </ul>
+            </div>
+
+            <h2>🎓 Formación</h2>
+            <div class="card">
+                <h3>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                <div class="meta">IES AGUADULCE · IES TRASSIERRA · Junta de Andalucía</div>
+                <p>2021 – 2025 · Todas las asignaturas aprobadas</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
