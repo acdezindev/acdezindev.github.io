@@ -23,43 +23,34 @@
         }
 
         .container {
-            max-width: 380px;
+            max-width: 320px;  /* Tamaño de móvil pequeño */
             width: 100%;
             text-align: center;
         }
 
         h1 {
-            font-size: 18px;
+            font-size: 16px;
             color: #8b5cf6;
-            margin-bottom: 20px;
-        }
-
-        /* ===== MARCO DE MÓVIL ===== */
-        .movil {
-            background: #0a0a0a;
-            padding: 12px;
-            border-radius: 30px;
-            box-shadow: 0 0 0 2px #2a2a2a, 0 20px 60px rgba(0,0,0,0.9);
+            margin-bottom: 15px;
         }
 
         video {
             width: 100%;
             height: auto;
-            display: block;
-            border-radius: 18px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
         }
 
-        /* ===== BOTÓN VOLVER ===== */
         .volver {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 20px;
             color: #aaa;
             text-decoration: none;
             border: 1px solid #555;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 6px;
             transition: 0.3s;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .volver:hover {
@@ -68,20 +59,12 @@
             border-color: #888;
         }
 
-        /* ===== MÓVILES PEQUEÑOS ===== */
-        @media (max-width: 450px) {
+        @media (max-width: 400px) {
             .container {
                 max-width: 100%;
             }
-            .movil {
-                padding: 8px;
-                border-radius: 20px;
-            }
-            video {
-                border-radius: 12px;
-            }
             h1 {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     </style>
@@ -91,13 +74,11 @@
     <div class="container">
         <h1>Rick and Morty App</h1>
 
-        <div class="movil">
-            <video controls autoplay>
-                <source src="videos/RickMorty.mp4" type="video/mp4">
-                <source src="src/videos/RickMorty.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-        </div>
+        <video controls autoplay>
+            <source src="videos/RickMorty.mp4" type="video/mp4">
+            <source src="src/videos/RickMorty.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
 
         <br>
         <a href="index.html" class="volver">← Volver al portafolio</a>
