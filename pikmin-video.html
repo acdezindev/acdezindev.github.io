@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty - Demo</title>
     <style>
-        /* ===== RESET MÍNIMO ===== */
         * {
             margin: 0;
             padding: 0;
@@ -24,24 +23,30 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 380px;
             width: 100%;
             text-align: center;
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 18px;
             color: #8b5cf6;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* ===== VIDEO ===== */
+        /* ===== MARCO DE MÓVIL ===== */
+        .movil {
+            background: #0a0a0a;
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: 0 0 0 2px #2a2a2a, 0 20px 60px rgba(0,0,0,0.9);
+        }
+
         video {
             width: 100%;
-            max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            display: block;
+            border-radius: 18px;
         }
 
         /* ===== BOTÓN VOLVER ===== */
@@ -63,15 +68,20 @@
             border-color: #888;
         }
 
-        /* ===== MÓVILES ===== */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 18px;
-                margin-bottom: 20px;
+        /* ===== MÓVILES PEQUEÑOS ===== */
+        @media (max-width: 450px) {
+            .container {
+                max-width: 100%;
             }
-            .volver {
-                font-size: 13px;
-                padding: 6px 16px;
+            .movil {
+                padding: 8px;
+                border-radius: 20px;
+            }
+            video {
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 16px;
             }
         }
     </style>
@@ -79,12 +89,15 @@
 <body>
 
     <div class="container">
-        <h1>📹 Rick and Morty App</h1>
+        <h1>Rick and Morty App</h1>
 
-        <video controls autoplay>
-            <source src="videos/RickMorty.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
+        <div class="movil">
+            <video controls autoplay>
+                <source src="videos/RickMorty.mp4" type="video/mp4">
+                <source src="src/videos/RickMorty.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
 
         <br>
         <a href="index.html" class="volver">← Volver al portafolio</a>
