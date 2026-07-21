@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abraham C.</title>
+    <title>Abraham C. - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -12,32 +16,34 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto Condensed', 'Segoe UI', sans-serif;
+            font-weight: 400;
             background-color: #f4f4f9;
             color: #333;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 40px 20px;
+            padding: 30px 15px;
             min-height: 100vh;
         }
 
         .container {
             display: flex;
-            max-width: 1100px;
+            max-width: 1050px;
             width: 100%;
             background: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             border: 1px solid #ddd;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
         }
 
+        /* Sidebar lateral */
         .sidebar {
-            background-color: #2b2d42;
+            background-color: #51586c;
             color: #fff;
-            padding: 40px 25px;
-            width: 24%;
+            padding: 40px 20px;
+            width: 25%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -46,157 +52,263 @@
         }
 
         .sidebar img {
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #fff;
+            border: 3px solid #e91d63;
             margin-bottom: 15px;
         }
 
         .sidebar h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
             color: #fff;
-        }
-
-        .sidebar .tagline {
-            font-size: 14px;
-            color: #b0b0c0;
-            margin-bottom: 20px;
-            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .sidebar .info {
-            font-size: 14px;
+            font-size: 13.5px;
+            font-weight: 300;
             color: #ffffff;
             text-align: left;
             width: 100%;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
-            padding-top: 20px;
-            margin-top: 10px;
+            padding-top: 25px;
         }
 
         .sidebar .info p {
-            margin-bottom: 8px;
+            margin-bottom: 14px;
+            line-height: 1.3;
+        }
+
+        .sidebar .info strong {
+            color: #e91d63;
+            font-weight: 600;
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
 
         .sidebar .info a {
-            color: #a0a0c0;
+            color: #d8dce6;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
+            transition: color 0.2s;
         }
 
         .sidebar .info a:hover {
-            color: #fff;
+            color: #64b5f6;
             text-decoration: underline;
         }
 
-        .main-content {
-            padding: 40px 35px;
-            width: 72%;
+        /* Contenedor del CV con línea divisoria superior */
+        .cv-section {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            width: 100%;
         }
 
+        /* Botón de descarga de CV */
+        .btn-cv {
+            display: block;
+            width: 100%;
+            padding: 8px 10px;
+            background-color: transparent;
+            color: #e91d63 !important;
+            border: 1px solid #e91d63;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cv:hover {
+            background-color: #e91d63;
+            color: #ffffff !important;
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            padding: 35px 30px;
+            width: 75%;
+        }
+
+        /* Títulos de sección principal (H2) */
         .main-content h2 {
-            color: #2b2d42;
-            font-size: 20px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+            color: #1e222d;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid #e91d63;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 16px;
         }
 
         .main-content h2:first-of-type {
             margin-top: 0;
         }
 
-        .main-content p {
+        /* Títulos de Categoría de Proyectos */
+        .category-header {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-top: 25px;
             margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .category-android {
+            color: #155724;
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .category-unity {
+            color: #383d41;
+            background-color: #e2e3e5;
+            border-left: 4px solid #6c757d;
+        }
+
+        .category-backend {
+            color: #004085;
+            background-color: #cce5ff;
+            border-left: 4px solid #0056b3;
+        }
+
+        .main-content p {
+            font-size: 13.5px;
+            font-weight: 300;
             line-height: 1.6;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .main-content p strong {
+            font-weight: 600;
         }
 
         .tag {
-            display: inline-block;
-            background-color: #e0e0e0;
+            display: inline;
             color: #2b2d42;
-            padding: 3px 12px;
-            border-radius: 4px;
             font-size: 13px;
-            margin: 3px 4px 3px 0;
-            font-weight: 500;
-            border: 1px solid #ccc;
+            font-weight: 400;
         }
 
+        .tag:not(:last-child)::after {
+            content: " • ";
+            color: #e91d63;
+            margin: 0 4px;
+            font-weight: bold;
+        }
+
+        /* Tarjetas (Cards) */
         .card {
             background: #f8f9fa;
-            padding: 18px 20px;
-            margin-bottom: 18px;
+            border: 1px solid #eaedd0;
+            border-left: 3px solid #2b2d42;
+            padding: 16px 18px;
+            margin-bottom: 15px;
+            border-radius: 4px;
         }
 
         .card h3 {
-            font-size: 18px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e222d;
+            margin-bottom: 3px;
+        }
+
+        .card .subtitle {
+            font-size: 14px;
+            font-weight: 600;
             color: #2b2d42;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .card .meta {
-            font-size: 14px;
-            color: #555555;
-            margin-bottom: 8px;
-            font-weight: 500;
+            font-size: 12.5px;
+            color: #666666;
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-style: italic;
         }
 
         .card ul {
-            padding-left: 20px;
-            margin-top: 6px;
+            padding-left: 18px;
+            margin-top: 8px;
         }
 
         .card ul li {
-            margin-bottom: 4px;
+            font-size: 13.5px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            line-height: 1.45;
         }
 
         .project-links {
             margin-top: 12px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .project-links a {
-            display: inline-block;
-            margin-right: 15px;
-            color: #2b2d42;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            color: #e91d63;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 12px;
             font-weight: 600;
             text-decoration: none;
-            padding: 6px 12px;
-            border: 1px solid #2b2d42;
-            background: #f3c7c7;      
-            border-radius: 4px;
-            transition: 0.3s;
+            border: 1px solid #e91d63;
+            transition: all 0.2s ease;
         }
 
         .project-links a:hover {
-            background: #2b2d42;
-            color: white;
+            background-color: #e91d63;
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                border-radius: 12px;
             }
 
             .sidebar {
                 width: 100%;
-                padding: 30px 20px;
+                padding: 25px 15px;
             }
 
             .main-content {
                 width: 100%;
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
 
             .sidebar img {
-                width: 120px;
-                height: 120px;
+                width: 110px;
+                height: 110px;
             }
         }
     </style>
@@ -208,180 +320,205 @@
        <div class="sidebar">
             <img src="images/FotoPerfil.jpg" alt="Abraham C.">
             <h1>Abraham C.</h1>
-             <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 15px; margin-top: 35px; text-align: center;">
-                <div class="tagline">
-                    * Desarrollador en formación.                
-                 <span style="font-size: 12px; color: #c0e1f0; margin: 4px 0 0 0;"> (Desarrollo de Aplicaciones Multiplataforma)</span>
-                </div>   
-                <div class="tagline">
-                    * Experiencia comercial, +20 años en retail tecnológico           
-                </div>  
-                <p style="font-size: 13px; color: #cbf4bf; margin: 0;">
-                   <strong> En busqueda activa de prácticas (FCT).</strong>
-                </p> 
-             </div>   
-             <div class="info">
-                <p>📩 <a href="mailto:acdezindev@gmail.com">acdezindev@gmail.com</a></p>
-                <p>📌 Málaga</p>
-                <p>🔗 <a href="https://github.com/acdezindev">GitHub</a></p>
-                <p>🔗 <a href="https://linkedin.com/in/abrahamcdev">LinkedIn</a></p>
-            </div>
             
+            <div class="info">
+                  <p>
+                    <span>Málaga, España</span>
+                </p>
+                <p>
+                    <a href="mailto:acdezindev@gmail.com">acdezindev@gmail.com</a>
+                </p>
+              
+                <p>
+                    <a href="https://github.com/acdezindev" target="_blank">Github</a>
+                </p>
+                <p>
+    
+                    <a href="https://linkedin.com/in/abrahamcdev" target="_blank">LinkedIn</a>
+                </p>
+
+                <div class="cv-section">
+                    <a href="CV_Abraham_C.pdf" download class="btn-cv">Descargar CV (PDF)</a>
+                </div>
+            </div>
         </div>
+
         <div class="main-content">
 
-           <h2>Sobre mí</h2>
-           <p>
-                Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> con <strong>todas las asignaturas aprobadas</strong>. 
-                Actualmente estoy buscando una empresa para realizar las <strong>prácticas FCT</strong>, 
-                poder titular y <strong>dar un giro a mi carrera profesional</strong> 
-                aplicando mi experiencia comercial al mundo del desarrollo.
+            <h2>Sobre mí</h2>
+            <p>
+                Estudiante del Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) con el <strong>100% de las asignaturas teóricas superadas</strong>, enfocado en la búsqueda de empresa para la realización del módulo de <strong>Prácticas Profesionales (FCT)</strong>.
             </p>
             <p>
-                He compaginado mi formación oficial en <strong>Desarrollo de Aplicaciones Multiplataforma</strong> 
-                (Junta de Andalucía) con mi trayectoria profesional en Carrefour, donde llevo más de 
-                <strong>20 años como asesor comercial en el sector tecnológico</strong>.
+                Con más de 20 años de experiencia como Asesor Comercial en el sector tecnológico (Carrefour), decidí cursar este ciclo superior para mantener mi mente activa y profundizar en la parte técnica del software, un ámbito estrechamente ligado a mi entorno de trabajo habitual.
             </p>
             <p>
-                Después de tantos años asesorando a clientes y viendo sus necesidades, 
-                sentí que podía dar un paso más, vi la oportunidad de <strong>unir mi conocimiento del sector y mi formación en desarrollo con la tecnología</strong> 
-                y aportar valor con una visión diferente al desarrollo de aplicaciones.
+                Tras haber superado con éxito todos los módulos teóricos del grado, mi objetivo actual es realizar el periodo de prácticas FCT para obtener la titulación oficial y aplicar los conocimientos adquiridos en un entorno real. Sumo hábitos de trabajo, responsabilidad y constancia asentados tras años en el sector comercial, con el foco puesto en integrarme rápido en la dinámica del equipo, aprender su metodología de desarrollo y completar mi formación con la máxima seriedad.
             </p>
-            <div class="card" style="background: #2b2d42; color: #2b2d42; border: none;">
-            <h3 style="color: #ffffff; border: none;">¿Qué busco?</h3>
-                <p style="color: #ebebeb; margin: 0;">
-                    Unirme a un equipo de desarrollo donde pueda aplicar mi <strong>visión comercial</strong> 
-                    y <strong>capacidad analítica</strong> para construir productos que resuelvan necesidades reales. 
-                    Mi objetivo es aportar <strong>más que código</strong>: entiendo el negocio, al cliente y cómo 
-                    la tecnología puede mejorar procesos.Estoy preparado para <strong>integrarme y crecer con la empresa</strong>.
+
+            <h2>Habilidades y Tecnologías</h2>
+
+            <div class="card" style="margin-bottom: 15px;">
+                <h3 style="font-size: 15px; margin-bottom: 10px;">Conocimientos Técnicos</h3>
+                
+                <p style="margin-bottom: 4px;"><strong>Lenguajes de programación:</strong></p>
+                <p style="margin-bottom: 12px;">
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Kotlin</span>
+                </p>
+
+                <p style="margin-bottom: 4px;"><strong>Bases de datos:</strong></p>
+                <p style="margin-bottom: 12px;">
+                    <span class="tag">MySQL</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">BaseX (XML)</span>
+                    <span class="tag">MySQL Workbench</span>
+                </p>
+
+                <p style="margin-bottom: 4px;"><strong>IDEs y Entornos de Desarrollo:</strong></p>
+                <p style="margin-bottom: 12px;">
+                    <span class="tag">Android Studio</span>
+                    <span class="tag">NetBeans</span>
+                    <span class="tag">Visual Studio Code</span>
+                    <span class="tag">Unity</span>
+                </p>
+
+                <p style="margin-bottom: 4px;"><strong>Herramientas y Gestión:</strong></p>
+                <p style="margin-bottom: 12px;">
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">Odoo (CRM / Ventas)</span>
+                    <span class="tag">Patrones de diseño</span>
+                </p>
+
+                <p style="margin-bottom: 4px;"><strong>Desarrollo y Arquitectura:</strong></p>
+                <p style="margin-bottom: 0;">
+                    <span class="tag">Programación Orientada a Objetos (POO)</span>
+                    <span class="tag">Programación de Servicios y Procesos (PSP)</span>
+                    <span class="tag">Desarrollo de Interfaces</span>
                 </p>
             </div>
-            
-            <h2>Tecnologías</h2>
-            <p>
-                <span class="tag">Java</span>
-                <span class="tag">SQL</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Android Studio</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-            </p>
 
-          <h2>Proyectos</h2>
+            <div class="card">
+                <h3 style="font-size: 15px; margin-bottom: 10px;">Competencias Personales</h3>
+                <ul>
+                    <li>Orientación a resultados y eficacia.</li>
+                    <li>Excelente comunicación oral y escrita / Escucha activa.</li>
+                    <li>Capacidad analítica y gestión de procesos (contratos, financiación, normativa).</li>
+                </ul>
+            </div>
 
-            <h3 style="color: #1a73e8; font-size: 17px; margin-top: 25px; margin-bottom: 12px; border-bottom: 2px solid #1a73e8; padding-bottom: 4px;">Proyectos Android</h3>
+            <h2>Proyectos</h2>
 
-            <!-- Proyecto Pikmin-->
+            <div class="category-header category-android">Proyectos Android</div>
+
             <div class="card">
                 <h3>Pikmin RecyclerView App</h3>
-                <p>Aplicación Android que muestra un listado de los 9 tipos de Pikmin en una cuadrícula.</p>
-                <span class="tag">Android</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">RecyclerView</span>
-                
+                <p>Aplicación Android que muestra un listado de los 9 tipos de Pikmin en una cuadrícula optimizada.</p>
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">RecyclerView</span>
+                </div>
                 <div class="project-links">
-                    <a href="pikmin-video.html">Ver Video</a>
+                    <a href="pikmin-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/pikmin-recyclerview-app" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- Proyecto RickAndMorty-->
             <div class="card">
                 <h3>Api RickAndMorty App</h3>
-                <p>Aplicación que visualiza y gestiona datos de la api de RickAndMorty.</p>
-                <span class="tag">Android</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">Api</span>
-                <span class="tag">Firestore</span>
-                <span class="tag">Firesbase</span>
-                
+                <p>Aplicación que visualiza y gestiona datos en tiempo real consumiendo la API REST de Rick & Morty.</p>
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Api REST</span>
+                    <span class="tag">Firestore</span>
+                    <span class="tag">Firebase</span>
+                </div>
                 <div class="project-links">
-                    <a href="rickmorty-video.html">Ver Video</a>
+                    <a href="rickmorty-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/rickandmorty-api-app" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- Proyecto Spyro-->
             <div class="card">
-                <h3>Guia Interactiva Spyro App</h3>
-                <p>Aplicación que visualiza y gestiona datos de la api de RickAndMorty.</p>
-                <span class="tag">Android</span>
-                <span class="tag">Kotlin</span>
-                
+                <h3>Guía Interactiva Spyro App</h3>
+                <p>Aplicación móvil interactiva desarrollada en Kotlin para consultar datos y multimedia sobre el universo del videojuego Spyro.</p>
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                </div>
                 <div class="project-links">
-                    <a href="spyro-video.html">Ver Video</a>
+                    <a href="spyro-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/guiainteractiva-api-app" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- Proyecto AstroBot-->
             <div class="card">
                 <h3>AstroBot - Gincana por Andalucía</h3>
                 <p>Aplicación Android que implementa una gincana interactiva con Google Maps, donde los usuarios deben recorrer diferentes puntos emblemáticos de Andalucía, responder preguntas y superar desafíos.</p>
-                <span class="tag">Android</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">Google Maps</span>
-                <span class="tag">Geolocalización</span>
-                <span class="tag">JSON</span>
-                
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Android</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Google Maps</span>
+                    <span class="tag">Geolocalización</span>
+                    <span class="tag">JSON</span>
+                </div>
                 <div class="project-links">
-                    <a href="astrobot-video.html">Ver Video</a>
+                    <a href="astrobot-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/astrobot-googlemaps-app" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <h3 style="color: #7c3aed; font-size: 17px; margin-top: 30px; margin-bottom: 12px; border-bottom: 2px solid #7c3aed; padding-bottom: 4px;">Proyectos Unity</h3>
+            <div class="category-header category-unity">Proyectos Unity</div>
 
-            <!-- Proyecto Unity - Juego 2D Platformas -->
             <div class="card">
                 <h3>Zodito - Juego 2D de Plataformas</h3>
                 <p>Videojuego 2D de plataformas desarrollado en Unity para dispositivos móviles. El jugador controla a "Zodito" en un nivel lleno de plataformas, coleccionables y enemigos. Incluye menú principal, ajustes de música y efectos, sistema de vidas y pantallas de victoria/derrota.</p>
-                <span class="tag">Unity</span>
-                <span class="tag">C#</span>
-                <span class="tag">2D</span>
-                <span class="tag">Plataformas</span>
-                <span class="tag">Móvil</span>
-                
-                <div class="project-links">
-                    <a href="zodito-video.html">Ver Video</a>
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">2D</span>
+                    <span class="tag">Plataformas</span>
+                    <span class="tag">Móvil</span>
                 </div>
-                 <p style="font-size: 14px; color: #4e638f; margin-top: 8px;"><strong>Los scripts más representativos del proyecto.</strong> </p>
-                    <div class="project-links">
-                        <a href="unity-zodito.html" target="_blank">Jugador</a>
-                        <a href="unity-gamemanager.html" target="_blank">Gestor</a>
-                        <a href="unity-eagle.html" target="_blank">Enemigo</a>
-                    </div>
+                <div class="project-links">
+                    <a href="zodito-video.html">Demo</a>
+                </div>
+                <p style="font-size: 13px; color: #4e638f; margin-top: 10px; margin-bottom: 4px;"><strong>Scripts más representativos del proyecto:</strong> </p>
+                <div class="project-links">
+                    <a href="unity-zodito.html" target="_blank">Jugador</a>
+                    <a href="unity-gamemanager.html" target="_blank">Gestor</a>
+                    <a href="unity-eagle.html" target="_blank">Enemigo</a>
+                </div>
             </div>
 
-            <h3 style="color: #d97706; font-size: 17px; margin-top: 30px; margin-bottom: 12px; border-bottom: 2px solid #d97706; padding-bottom: 4px;">Proyectos Backend / Escritorio</h3>
+            <div class="category-header category-backend">Proyectos Backend / Escritorio</div>
 
-            <!-- Proyecto CRUD Universidades y Alumnos -->
             <div class="card">
                 <h3>Gestión de Universidades y Alumnos</h3>
-                   <p>Aplicación de escritorio desarrollada con <strong>NetBeans</strong> y <strong>Swing</strong> que implementa un CRUD completo (Crear, Leer, Actualizar, Eliminar) para la gestión de universidades y sus alumnos. Proyecto de la asignatura de Acceso a Datos.</p>
-               <span class="tag">Java</span>
-                <span class="tag">SQL</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">JDBC</span>
-                <span class="tag">Swing</span>
-                <span class="tag">NetBeans</span>
-                <span class="tag">CRUD</span>
-                
+                <p>Aplicación de escritorio desarrollada con <strong>NetBeans</strong> y <strong>Swing</strong> que implementa un CRUD completo (Crear, Leer, Actualizar, Eliminar) para la gestión de universidades y sus alumnos. Proyecto enfocado en Acceso a Datos.</p>
+                <div style="margin-bottom: 6px;">
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">JDBC</span>
+                    <span class="tag">Swing</span>
+                    <span class="tag">NetBeans</span>
+                    <span class="tag">CRUD</span>
+                </div>
                 <div class="project-links">
-                    <a href="crud-video.html">Ver Video</a>
+                    <a href="crud-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/ad-gestionuniversidadcrud" target="_blank">GitHub</a>
                 </div>
             </div>
 
-
-            <!-- Proyecto Generación de Informes con iReport -->
             <div class="card">
                 <h3>Sistema de Informes con iReport y Java</h3>
                 <p>Aplicación de escritorio que integra <strong>iReport Designer</strong> con <strong>Java</strong> y <strong>NetBeans</strong> para la generación dinámica de informes personalizados (PDF, HTML, etc.) a partir de bases de datos relacionales, automatizando la salida de datos.</p>
-                
-                <div class="tags">
+                <div style="margin-bottom: 6px;">
                     <span class="tag">Java</span>
                     <span class="tag">iReport</span>
                     <span class="tag">JasperReports</span>
@@ -391,18 +528,15 @@
                     <span class="tag">PDF</span>
                     <span class="tag">Gestión de Datos</span>
                 </div>
-
                 <div class="project-links">
                     <a href="https://github.com/acdezindev/ad-jasperreport-informes" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- Proyecto Servidor ITV Seguro -->
             <div class="card">
                 <h3>Servidor ITV Seguro con SSL/TLS</h3>
-                <p>Servidor HTTP seguro que simula una estación de Inspección Técnica de Vehículos (ITV). Implementa comunicación cifrada mediante <strong>SSL/TLS</strong>, autenticación de usuarios con <strong>BCrypt</strong> y almacenamiento seguro de credenciales con <strong>AES</strong>. El servidor permite a los usuarios registrarse, iniciar sesión, reservar citas y pasar la inspección de su vehículo con simulación de pruebas en tiempo real.</p>
-                
-                <div class="tags">
+                <p>Servidor HTTP seguro que simula una estación de Inspección Técnica de Vehículos (ITV). Implementa comunicación cifrada mediante <strong>SSL/TLS</strong>, autenticación de usuarios con <strong>BCrypt</strong> y almacenamiento seguro de credenciales con <strong>AES</strong>. Permite registro, inicio de sesión, reserva de citas y simulación de pruebas en tiempo real.</p>
+                <div style="margin-bottom: 6px;">
                     <span class="tag">Java</span>
                     <span class="tag">SSL/TLS</span>
                     <span class="tag">BCrypt</span>
@@ -413,52 +547,54 @@
                     <span class="tag">HTTPS</span>
                     <span class="tag">Logging</span>
                 </div>
-
                 <div class="project-links">
-                    <a href="itv-video.html">Ver Video</a>
+                    <a href="itv-video.html">Demo</a>
                     <a href="https://github.com/acdezindev/psp-servidor-itv" target="_blank">GitHub</a>
                 </div>
             </div>
 
             <h2>Experiencia</h2>
             <div class="card">
-                <h3>Carrefour — Asesor Comercial Senior</h3>
+                <h3 style="color: #e91d63;">Carrefour — Asesor Comercial y Especialista EFCS</h3>
                 <div class="meta">2004 – Actualidad · Málaga, España</div>
                 
-                <p><strong>Liderazgo y gestión comercial en el sector tecnológico</strong></p>
+                <p class="subtitle">Liderazgo comercial y visión de negocio en el sector tecnológico</p>
                 
                 <ul>
-                    <li><strong>Gestión de proyectos y productos:</strong> Coordinación con proveedores y lanzamiento de nuevos productos tecnológicos (TV, informática, sonido).</li>
-                    <li><strong>Análisis de datos y toma de decisiones:</strong> Seguimiento de ventas, identificación de tendencias y ajuste de estrategias comerciales.</li>
-                    <li><strong>Formación y liderazgo de equipos:</strong> Capacitación de nuevos empleados en productos y atención al cliente.</li>
-                    <li><strong>Resolución de problemas complejos:</strong> Gestión de incidencias con clientes, proveedores y sistemas informáticos.</li>
+                    <li><strong>Liderazgo y rendimiento:</strong> N.º 1 en ratios de comisión y volumen de ventas en relación con las horas trabajadas.</li>
+                    <li><strong>Prescripción estratégica:</strong> Excelente porcentaje de conversión orientando la venta hacia productos tecnológicos de mayor margen y rentabilidad.</li>
+                    <li><strong>Gestión de procesos y rigor:</strong> Tramitación continuada de soluciones financieras, contratación de seguros y garantías, asegurando el cumplimiento normativo.</li>
+                    <li><strong>Consultoría técnica:</strong> Identificación de necesidades del usuario para la prescripción de soluciones tecnológicas idóneas (hardware y software).</li>
                 </ul>
                 
-                <p style="margin-top: 10px; color: #555; font-size: 14px; font-style: italic;">
-                    <strong>Valor transferible a programación:</strong> Gestión de proyectos, análisis de datos, resolución de problemas, trabajo en equipo y orientación a resultados.
+                <p style="margin-top: 10px; color: #555; font-size: 13px; font-style: italic;">
+                    <strong>Valor transferible al desarrollo de software:</strong> Capacidad analítica de negocio, atención al detalle, gestión de normativas/procesos, trabajo en equipo y orientación a resultados.
                 </p>
             </div>
 
             <h2>Formación</h2>
             <div class="card">
-                <h3>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
-                <div class="meta">Formación oficial · Junta de Andalucía</div>
-                <p>|| 2021 – 2026 || <strong>(Todas las asignaturas aprobadas)</strong></p> 
-                <p style="font-size: 13px; color: #666;">IES Aguadulce · IES Trassierra</p>
+                <h3 style="color: #e91d63; margin-bottom: 2px;">I.E.S. Aguadulce (Junta de Andalucía)</h3>
+                <p class="subtitle">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
+                <div class="meta">2021 – 2026 (Pendiente de realización del módulo de Formación en Centros de Trabajo - FCT)</div>
+                
+                <p style="font-size: 13.5px; font-weight: 300; margin: 0;">
+                    ● <strong>Asignaturas destacadas:</strong> Java, Bases de Datos, Programación de Servicios y Procesos, Programación multimedia y dispositivos móviles, Desarrollo de Interfaces.
+                </p>
             </div>
 
-      
-<hr style="border: none; border-top: 2px solid #e0e0e0; margin: 30px 0;">
+            <hr style="border: none; border-top: 2px solid #e0e0e0; margin: 25px 0;">
 
-<div style="background: #f0f0f8; padding: 20px 25px; border-radius: 10px; border-left: 4px solid #8b5cf6; text-align: center;">
-    <p style="font-style: italic; color: #555; font-size: 12px; margin: 0;">
-        "No puedes conectar los puntos mirando hacia adelante; solo puedes conectarlos mirando hacia atrás."
-    </p>
-    <p style="font-weight: 500; color: #2b2d42; margin: 8px 0 0 0;">
-        -- Steve Jobs --
-    </p>
+            <div style="background: #f0f0f8; padding: 16px 20px; border-radius: 8px; border-left: 4px solid #e91d63; text-align: center;">
+                <p style="font-style: italic; color: #555; font-size: 12px; margin: 0;">
+                    "No puedes conectar los puntos mirando hacia adelante; solo puedes conectarlos mirando hacia atrás."
+                </p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700; color: #2b2d42; margin: 6px 0 0 0; text-transform: uppercase; font-size: 13px;">
+                    -- Steve Jobs --
+                </p>
+            </div>
+
         </div>
-        
 
     </div>
 
